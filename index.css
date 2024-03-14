@@ -1,0 +1,253 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Rubik', 'Fira Sans', 'Poppins', sans-serif;
+  scrollbar-width: thin;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  width: 100%;
+  & div:not(:first-child), p:not(#name), h1, h2, iframe, img{
+    view-timeline-name: --image;
+    view-timeline-axis: block;
+    animation-timeline: --image;
+    animation-name: show;
+    animation-range: entry 15% cover 45%;
+    animation-fill-mode: both;
+  }
+}
+
+@keyframes show {
+  from {
+    opacity: 0;
+    scale: 25%;
+  }
+  to {
+    opacity: 1;
+    scale: 100%;
+  }
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  gap: 20px;
+  background: radial-gradient(circle at center, rgb(0, 0, 0) 9%, rgb(5, 5, 5)91%);
+}
+
+.text_info {
+  font-size: 19px;
+  color: white;
+}
+#name {
+  color: gray;
+  position: absolute;
+  left: 1%;
+  bottom: 1%;
+  font-style: italic;
+  font-size: 13px;
+}
+
+#container_menu {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  max-width: 400px;
+  width: 100%;
+  height: 35px;
+  border-radius: 100px;
+  position: absolute;
+  top: 2%; right: 2%;
+  gap: 29px;
+  z-index: 10;
+  & a {
+    font-size: 15px;
+    color: #c4c4c4;
+    text-decoration: none;
+    list-style: none;
+    text-transform: uppercase;
+    cursor: pointer;
+  }
+  & a:hover {
+    color: #fefefe;
+  }
+}
+
+.fa-brands{
+  color: rgb(161, 161, 161);
+  position: absolute;
+  left: 1%;
+  top: 2%;
+  font-size: 35px;
+}
+
+#container_title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  & #h1_header {
+    color: #b8b8b8;
+    font-size: 60px;
+    z-index: 1;
+    text-align: center;
+  }
+  & h3 {
+    color: #fefefe;
+  }
+  & img {
+    object-fit: contain;
+    max-width: 700px;
+    z-index: 2;
+    position: relative;
+    height: auto;
+    width: 100%;
+  }
+}
+
+
+#container_intro {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-grow: 1;
+  gap: 15px;
+  height: 100vh;
+  width: 100%;
+  background: #1b1b1b;
+  padding: 10px;
+
+  & div {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    max-width: 700px;
+    & h4 {
+      color: #ffffff;
+      font-weight: bold;
+      font-size: 25px;
+    }
+    & p {
+      color: #cecaca;
+    }
+  }
+  & iframe {
+    max-width: 500px;
+    max-height: 300px;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+  }
+}
+
+
+
+#container_pricing {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-grow: 1;
+  gap: 15px;
+  height: 100vh;
+  width: 100%;
+  background: #1b1b1b;
+  padding: 10px;
+
+  & div {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    max-width: 600px;
+    & h4 {
+      color: #fefefe;
+      font-weight: bold;
+      font-size: 25px;
+    }
+    & p {
+      color: #fefefe;
+    }
+  }
+}
+
+#pricing_img {
+  object-fit: fill;
+  max-width: 600px;
+  width: 100%;
+  height: auto;
+  max-height: 350px;
+  border-radius: 10px;
+}
+
+#container_impact {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-grow: 1;
+  gap: 15px;
+  height: 100vh;
+  width: 100%;
+  background: #1b1b1b;
+  padding: 10px;
+
+  & div {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    max-width: 700px;
+    & h4 {
+      color: #ffffff;
+      font-weight: bold;
+      font-size: 25px;
+    }
+    & p {
+      color: #cecaca;
+    }
+  }
+  & iframe {
+    max-width: 500px;
+    max-height: 300px;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+  }
+}
+
+@media(max-width: 768px) {
+  body {
+    & div {
+      animation-name: none;
+    }
+  }
+  #container_intro {
+    overflow-y: auto;
+  }
+  #container_impact {
+    overflow-y: auto;
+  }
+}
